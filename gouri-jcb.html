@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gouri JCB | JCB Rental & Construction Service</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#111;
+color:#fff;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(8px);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+color:#ffd000;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ffd000;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.70)),
+url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:65px;
+color:#ffd000;
+}
+
+.hero-content p{
+margin-top:20px;
+font-size:22px;
+line-height:1.8;
+max-width:900px;
+}
+
+.buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 34px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.call{
+background:#ffd000;
+color:black;
+}
+
+.call:hover{
+transform:translateY(-5px);
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.whatsapp:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:100px 8%;
+}
+
+.title{
+text-align:center;
+font-size:42px;
+color:#ffd000;
+margin-bottom:60px;
+}
+
+.about{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.about-text h2{
+font-size:38px;
+margin-bottom:20px;
+color:#ffd000;
+}
+
+.about-text p{
+line-height:2;
+font-size:18px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1a1a1a;
+padding:35px;
+border-radius:20px;
+transition:.4s;
+border:2px solid transparent;
+}
+
+.card:hover{
+border-color:#ffd000;
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#ffd000;
+margin-bottom:15px;
+font-size:24px;
+}
+
+.card p{
+line-height:1.8;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.contact{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:50px;
+}
+
+.contact-box{
+background:#1c1c1c;
+padding:35px;
+border-radius:20px;
+}
+
+.contact-box h3{
+color:#ffd000;
+margin-bottom:20px;
+}
+
+.contact-box p{
+margin:12px 0;
+font-size:18px;
+}
+
+form input,
+form textarea{
+width:100%;
+padding:15px;
+margin:12px 0;
+background:#111;
+border:none;
+outline:none;
+border-radius:10px;
+color:white;
+}
+
+form textarea{
+height:150px;
+resize:none;
+}
+
+.send{
+background:#ffd000;
+color:black;
+border:none;
+padding:15px;
+width:100%;
+font-size:18px;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+}
+
+footer{
+background:black;
+padding:35px;
+text-align:center;
+}
+
+.social{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.social a{
+text-decoration:none;
+background:#ffd000;
+color:black;
+padding:12px 25px;
+border-radius:40px;
+font-weight:bold;
+}
+
+.float-call{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#ffd000;
+color:black;
+padding:18px 22px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+z-index:999;
+box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+.float-whatsapp{
+position:fixed;
+bottom:100px;
+right:30px;
+background:#25D366;
+color:white;
+padding:18px 22px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+z-index:999;
+box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+@media(max-width:900px){
+
+.hero-content h1{
+font-size:45px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+GOURI JCB
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>GOURI JCB</h1>
+
+<p>
+
+Professional JCB Rental, Excavation, Earth Moving,
+Construction & Land Leveling Services.
+
+Fast Service • Trusted Work • Affordable Price
+
+</p>
+
+<div class="buttons">
+
+<a href="tel:+919587862546" class="btn call">
+📞 Call Now
+</a>
+
+<a href="https://wa.me/919587862546" class="btn whatsapp">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">
+About Us
+</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1599707254554-027aeb4deacd?auto=format&fit=crop&w=900&q=80">
+
+<div class="about-text">
+
+<h2>Welcome To Gouri JCB</h2>
+
+<p>
+
+We provide professional JCB machine services for
+construction, road work, foundation digging,
+land leveling, demolition and excavation.
+
+Customer satisfaction is our first priority.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="title">
+Our Services
+</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>🚜 JCB Rental</h3>
+<p>
+Daily, weekly aur monthly basis par JCB machine
+rent par uplabdh.
+</p>
+</div>
+
+<div class="card">
+<h3>⛏ Excavation Work</h3>
+<p>
+Foundation digging, basement aur earth excavation
+professional tareeke se.
+</p>
+</div>
+
+<div class="card">
+<h3>🏗 Construction Work</h3>
+<p>
+Building construction, site preparation aur
+heavy equipment support.
+</p>
+</div>
+
+<div class="card">
+<h3>🌾 Land Leveling</h3>
+<p>
+Khet, plot aur industrial land leveling ki service.
+</p>
+</div>
+
+<div class="card">
+<h3>🛣 Road Work</h3>
+<p>
+Road cutting, filling aur construction work.
+</p>
+</div>
+
+<div class="card">
+<h3>💥 Demolition</h3>
+<p>
+Old building aur structure demolition service.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="title">
+Gallery
+</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1599707254554-027aeb4deacd?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">
+Contact Us
+</h2>
+
+<div class="contact">
+
+<div class="contact-box">
+
+<h3>Contact Information</h3>
+
+<p>📞 +91 9587862546</p>
+
+<p>💬 WhatsApp : +91 9587862546</p>
+
+<p>🏢 Business : Gouri JCB</p>
+
+<p>⏰ Service : 24×7 Available</p>
+
+<div class="social">
+
+<a href="https://www.instagram.com/fayaz_gouri_jcb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/results?search_query=fayaz+gouri+jcb" target="_blank">
+YouTube
+</a>
+
+</div>
+
+</div>
+
+<div class="contact-box">
+
+<form>
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="tel"
+placeholder="Mobile Number"
+required>
+
+<textarea
+placeholder="Write Your Work Details">
+</textarea>
+
+<button
+class="send">
+Send Request
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+<footer>
+
+<h2>GOURI JCB</h2>
+
+<p>
+
+Professional JCB Rental &
+Construction Services
+
+</p>
+
+<div class="social">
+
+<a href="tel:+919587862546">
+
+📞 Call
+
+</a>
+
+<a href="https://wa.me/919587862546" target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+<a href="https://www.instagram.com/fayaz_gouri_jcb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+
+📷 Instagram
+
+</a>
+
+<a href="https://www.youtube.com/results?search_query=fayaz+gouri+jcb" target="_blank">
+
+▶ YouTube
+
+</a>
+
+</div>
+
+<br>
+
+<p>
+
+© 2026 Gouri JCB
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<a
+class="float-call"
+href="tel:+919587862546">
+
+📞
+
+</a>
+
+<a
+class="float-whatsapp"
+href="https://wa.me/919587862546"
+target="_blank">
+
+💬
+
+</a>
+
+<script>
+
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(60px)";
+
+card.style.transition=".7s";
+
+observer.observe(card);
+
+});
+
+const gallery=document.querySelectorAll(".gallery img");
+
+gallery.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+window.open(img.src);
+
+});
+
+});
+
+const form=document.querySelector("form");
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("Thank You! Your request has been received. We will contact you soon.");
+
+form.reset();
+
+});
+
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector("header");
+
+if(window.scrollY>50){
+
+header.style.background="#000";
+
+}else{
+
+header.style.background="rgba(0,0,0,.85)";
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
